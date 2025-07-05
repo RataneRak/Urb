@@ -223,14 +223,6 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de 
 - [Font Awesome](https://fontawesome.com/) - Icônes
 - [Clean Code](https://clean-code-developer.com/) - Principes de développement
 
-## 📞 Support
-
-Si vous rencontrez des problèmes ou avez des questions :
-
-- 📧 **Email** : votre-email@example.com
-- 🐛 **Issues** : [GitHub Issues](https://github.com/votre-username/gestionnaire-taches/issues)
-- 📖 **Documentation** : [Wiki](https://github.com/votre-username/gestionnaire-taches/wiki)
-
 ---
 
 ⭐ **N'oubliez pas de donner une étoile au projet si vous l'aimez !**
