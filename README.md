@@ -212,10 +212,6 @@ Voir [CHANGELOG.md](CHANGELOG.md) pour l'historique des versions.
 
 Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
 
-## 👥 Auteurs
-
-- **Votre Nom** - _Développement initial_ - [VotreGitHub](https://github.com/votre-username)
-
 ## 🙏 Remerciements
 
 - [Flask](https://flask.palletsprojects.com/) - Framework web
