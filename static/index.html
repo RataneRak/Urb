@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestionnaire de Tâches</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Favicon for the app -->
+    <link rel="icon" type="image/png" href="/static/favicon.png" />
+  </head>
+  <body>
+    <!-- Page de Connexion / Inscription -->
+    <div id="auth-container">
+      <div class="form-container" id="login-view">
+        <h1>Connexion</h1>
+        <form id="login-form">
+          <input type="email" id="login-email" placeholder="Email" required />
+          <input
+            type="password"
+            id="login-password"
+            placeholder="Mot de passe"
+            required
+          />
+          <button type="submit">Se connecter</button>
+        </form>
+        <p>Pas de compte ? <a href="#" id="show-register">Inscrivez-vous</a></p>
+      </div>
+      <div class="form-container" id="register-view" style="display: none">
+        <h1>Inscription</h1>
+        <form id="register-form">
+          <input
+            type="email"
+            id="register-email"
+            placeholder="Email"
+            required
+          />
+          <input
+            type="password"
+            id="register-password"
+            placeholder="Mot de passe"
+            required
+          />
+          <button type="submit">S'inscrire</button>
+        </form>
+        <p>Déjà un compte ? <a href="#" id="show-login">Connectez-vous</a></p>
+      </div>
+    </div>
+
+    <!-- Gestionnaire de tâches (caché par défaut) -->
+    <div id="app-container" style="display: none">
+      <div class="app-header">
+        <span id="user-email"></span>
+        <button id="logout-btn">Déconnexion</button>
+      </div>
+      <div class="container">
+        <h1>Gestionnaire de Tâches</h1>
+        <form id="task-form">
+          <label for="title" class="visually-hidden">Titre</label>
+          <input
+            type="text"
+            id="title"
+            placeholder="Titre de la tâche"
+            required
+            autocomplete="off"
+          />
+          <label for="description" class="visually-hidden">Description</label>
+          <input
+            type="text"
+            id="description"
+            placeholder="Description (optionnelle)"
+            autocomplete="off"
+          />
+          <label for="priority" class="visually-hidden">Priorité</label>
+          <select id="priority">
+            <option value="basse">Basse</option>
+            <option value="normale" selected>Normale</option>
+            <option value="haute">Haute</option>
+          </select>
+          <label for="due_date" class="visually-hidden">Échéance</label>
+          <input type="datetime-local" id="due_date" placeholder="Échéance" />
+          <button type="submit">Ajouter</button>
+        </form>
+        <div
+          style="
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 8px;
+          "
+        >
+          <label for="search" class="visually-hidden">Rechercher</label>
+          <input
+            type="text"
+            id="search"
+            placeholder="Rechercher une tâche..."
+            style="flex: 1"
+            autocomplete="off"
+          />
+          <label for="filter-priority" class="visually-hidden"
+            >Filtrer par priorité</label
+          >
+          <select id="filter-priority">
+            <option value="">Toutes priorités</option>
+            <option value="basse">Basse</option>
+            <option value="normale">Normale</option>
+            <option value="haute">Haute</option>
+          </select>
+        </div>
+        <ul id="task-list"></ul>
+        <div id="notification"></div>
+      </div>
+    </div>
+
+    <script src="api_helper.js"></script>
+    <script src="auth.js"></script>
+    <script src="app.js" defer></script>
+    <style>
+      .visually-hidden {
+        position: absolute !important;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px);
+        white-space: nowrap;
+      }
+    </style>
+  </body>
+</html>

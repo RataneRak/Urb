@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clean-code-python-project"
+version = "1.0.0"
+description = "Gestionnaire de tâches professionnel avec interface web (Flask)"
+authors = [
+    { name="Ton Nom", email="ton.email@example.com" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "Flask>=2.0",
+    "Flask-Cors>=3.0",
+    "pytest"
+]
+
+[tool.black]
+line-length = 88
+skip-string-normalization = true 
